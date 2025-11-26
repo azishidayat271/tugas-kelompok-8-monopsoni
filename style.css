@@ -1,0 +1,396 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0288d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar li {
+  margin-left: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #ffeb3b;
+}
+
+/* Team Section */
+.team {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #6c2eff; /* warna ungu biar match CTA */
+  transition: transform 0.4s ease, box-shadow 0.3s;
+}
+
+.team-card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.team-card .role {
+  font-weight: bold;
+  color: #6c2eff;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(2,136,209,0.6), rgba(2,136,209,0.6)),
+              url('https://picsum.photos/1200/400') no-repeat center/cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.hero .btn {
+  background: #ffeb3b;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.hero .btn:hover {
+  background: #fff176;
+}
+
+/* Container */
+.container {
+  display: flex;
+  padding: 40px 10%;
+  gap: 20px;
+}
+
+/* Content */
+.content {
+  flex: 3;
+}
+.content h2 {
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.card h3 {
+  margin-bottom: 10px;
+}
+.card a {
+  text-decoration: none;
+  color: #0288d1;
+  font-weight: bold;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Chat Section */
+.chat-section {
+  padding: 40px 10%;
+  background: #f1f1f1;
+  border-top: 2px solid #ddd;
+}
+
+.chat-section h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* User di kanan */
+.chat-message.user {
+  background: #e1f5fe;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+/* Bot di kiri */
+.chat-message.bot {
+  background: #c8e6c9;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.chat-input button {
+  background: #0288d1;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: #0277bd;
+}
+
+.chat-tools {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.chat-tools button {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.chat-tools button:hover {
+  background: #c62828;
+}
+
+/* Footer CTA */
+.footer-cta {
+  background: #0288d1; /* biru tua */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  border-radius: 20px;
+  margin: 40px 20px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-cta h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footer-cta button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.footer-cta button:hover {
+  background: #333;
+}
+
+/* Footer Main */
+.footer-main {
+  background: #1e1e1e;
+  color: #aaa;
+  padding: 40px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-brand h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-links div {
+  min-width: 120px;
+}
+
+.footer-links h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #aaa;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  text-align: center;
+  background: #111;
+  color: #777;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "hero"
+      "main"
+      "left-aside"
+      "right-aside";
+  }
+
+  .footer-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
